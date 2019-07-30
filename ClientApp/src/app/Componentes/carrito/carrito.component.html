@@ -1,0 +1,16 @@
+  
+         
+            
+              <div class="modal-content">
+                      
+              <ul class="w3-row w3-grayscale">
+                    <li *ngFor="let vista of VC" class="w3-bar">
+                      <span onclick="this.parentElement.style.display='none'" class="w3-bar-item w3-button w3-white w3-xlarge w3-right">×</span>
+                      <img src="{{vista.car_url}}" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                      <div class="w3-bar-item">
+                        <span class="w3-large">{{vista.car_descripcion}}</span><br>
+                        <span>Precio: {{vista.car_precio}}</span>
+                      </div>
+                    </li>
+                  </ul>
+              </div>

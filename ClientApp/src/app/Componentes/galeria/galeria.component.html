@@ -1,0 +1,18 @@
+
+ <br><br>
+ <div class="w3-row w3-grayscale">
+   
+    <div  *ngFor="let vista of VP" class="w3-col l3 s6">
+        <div   class="w3-container">
+            <div class="w3-container w3-text-grey" id="jeans">
+                <p>{{vista.pro_cat}} - {{vista.pro_sexo}}</p>
+              </div>
+          <img src={{vista.pro_url}} style="width:100%">
+             <div class="w3-display-middle w3-display-hover">
+               <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          <p> {{vista.pro_descripcion}}<br><b>${{vista.pro_precio}}</b></p>
+        </div>
+  </div>
+</div><br>
+  

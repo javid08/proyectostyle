@@ -1,0 +1,62 @@
+ <div class="w3-container">
+    <div class="w3-row">
+        <div class="w3-col w3-container w3-blue" style="width:250px">
+
+    <!-- Menu vertical-->      
+   <ul>barra
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px;" id="mySidebar">
+           
+            <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+              <a (click)=" cat='blusas'" class="w3-bar-item w3-button">Blusas</a>
+              <a (click)=" cat='vestidos'" class="w3-bar-item w3-button">Vestidos</a>
+              <a (click)=" cat='jeans'" class="w3-bar-item w3-button">Jeans</a>
+              <a (click)=" cat='chaquetas'" class="w3-bar-item w3-button">Chaquetas</a>
+              <a (click)=" cat='gymwear'" class="w3-bar-item w3-button">Gymwear</a>
+              <a (click)=" cat='blazers'" class="w3-bar-item w3-button">Blazers</a>
+              <a (click)=" cat='zapatos'" class="w3-bar-item w3-button">zapatos</a>
+            </div>
+          </nav>
+
+</ul>
+
+<div class="w3-main" style="margin-left:250px"></div>
+<div class="w3-hide-large" style="margin-top:83px"></div>
+
+</div>
+<!-- fin Menu vertical-->  
+  
+  <!-- mostrar productos-->    
+ <div class="w3-rest w3-container">
+ <br><br>
+ <div class="w3-row w3-grayscale">
+   
+    <div  *ngFor="let vista of VP" class="w3-col l3 s6">
+        <div  *ngIf= "vista.pro_sexo==sexo && vista.pro_cat== cat" class="w3-container">
+            <div class="w3-container w3-text-grey" id="jeans">
+                <p>{{vista.pro_cat}} -    {{vista.pro_sexo}} </p>
+              </div>
+          <img src={{vista.pro_url}} style="width:100%">
+             <div class="w3-display-middle w3-display-hover">
+               <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+            
+          <p> {{vista.pro_descripcion}}<br><b>${{vista.pro_precio}}</b></p>
+        </div>
+  </div>
+</div><br>
+ <!-- fin mostrar productos-->  
+
+ 
+
+          <app-footer></app-footer>
+        </div>
+       
+      </div>
+      
+ </div>
+ 
+
+
+
+
+  
